@@ -18,10 +18,10 @@
       <% @characters.each do |character| %>
       <tr>
         <td><a href="/movies/<%= character.movie_id %>">
-            <%= Movie.find_by(:id => character.movie_id).title %></td>
+            <%= character.movie.title %></td>
             </a></td>
         <td><a href="/actors/<%= character.actor_id %>">
-            <%= Actor.find_by(:id => character.actor_id).name %></td>
+            <%= character.actor.name %></td>
             </a></td>
         <td><%= character.name %></td>
         <td>
