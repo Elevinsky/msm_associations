@@ -2,7 +2,6 @@ class Movie < ApplicationRecord
 #   - director_id: must be present
 validates :director_id, :presence => true
 
-
 # - title: must be present; must be unique in combination with year
 validates :title, :presence => true, :uniqueness => { :scope => :year}
 
