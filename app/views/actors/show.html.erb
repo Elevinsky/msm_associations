@@ -20,7 +20,7 @@
       <dt>Filmography</dt>
       <dd>
         <ul><% @actor.characters.each do |character| %>
-            <li><a href="/movie/<%= character.movie.id %>"><%= character.movie.title %></a> (<%= character.name %>)</li>
+            <li><a href="/movies/<%= character.movie.id %>"><%= character.movie.title %></a> (<%= character.name %>)</li>
             <% end %>
             </ul></dd>
 
