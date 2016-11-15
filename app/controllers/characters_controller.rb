@@ -27,7 +27,7 @@ class CharactersController < ApplicationController
     save_status = @character.save
 
     if save_status == true
-      redirect_to(:back, :notice => "Character created successfully.")
+      redirect_to("/characters", :notice => "Character created successfully.")
     else
       render("characters/new.html.erb")
     end
@@ -49,7 +49,7 @@ class CharactersController < ApplicationController
     save_status = @character.save
 
     if save_status == true
-      redirect_to(:back, :notice => "Character updated successfully.")
+      redirect_to("/characters", :notice => "Character updated successfully.")
     else
       render("characters/edit.html.erb")
     end

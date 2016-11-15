@@ -29,7 +29,7 @@ class DirectorsController < ApplicationController
     save_status = @director.save
 
     if save_status == true
-      redirect_to(:back, :notice => "Director created successfully.")
+      redirect_to("/directors", :notice => "Director created successfully.")
     else
       render("directors/new.html.erb")
     end
@@ -52,7 +52,7 @@ class DirectorsController < ApplicationController
     save_status = @director.save
 
     if save_status == true
-      redirect_to(:back, :notice => "Director updated successfully.")
+      redirect_to("/directors", :notice => "Director updated successfully.")
     else
       render("directors/edit.html.erb")
     end
